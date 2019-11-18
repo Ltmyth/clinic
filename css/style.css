@@ -101,6 +101,10 @@ a.link {
   height: auto;
   display: inline-block; }
 
+.white{
+  color:white;
+}
+
 .img-rounded {
   border-radius: 4px; }
 

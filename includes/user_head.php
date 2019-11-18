@@ -21,6 +21,8 @@ include('classes/general.php');
 <![endif]-->
 </head>
 
+<?php session_start(); ?>
+
 <body class="fix-header fix-sidebar card-no-border">
     <!-- ============================================================== -->
     <!-- Preloader - style you can find in spinners.css -->
@@ -42,7 +44,7 @@ include('classes/general.php');
                 <!-- Logo -->
                 <!-- ============================================================== -->
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="index.php">
+                    <a class="navbar-brand" href="user_home.php">
                         <!-- Logo icon --><b>
                             <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                             
@@ -80,9 +82,9 @@ include('classes/general.php');
                         <!-- ============================================================== -->
                         <!-- Profile -->
                         <!-- ============================================================== -->
-                        <li class="nav-item dropdown">
+                        <li>
                             <br>
-                            <b class="white">Admin</b>
+                            <b class="white">User</b>
                         </li>
                         <li>
                             <br>
@@ -90,6 +92,7 @@ include('classes/general.php');
                                 <button class="btn btn-sm btn-danger">Logout</button>
                             </a>
                         </li>
+
                     </ul>
                 </div>
             </nav>
@@ -104,16 +107,15 @@ include('classes/general.php');
                 <!-- Sidebar navigation-->
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">
-                        <li> <a class="waves-effect waves-dark" href="admin_home.php" aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">Admin Dashboard</span></a>
+                        <li> <a class="waves-effect waves-dark" href="user_home.php" aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">Home</span></a>
                         </li>
-                        <li> <a class="waves-effect waves-dark" href="user_results.php" aria-expanded="false"><i class="mdi mdi-account-check"></i><span class="hide-menu">Results</span></a>
-                        </li>
-                        <!-- <li> <a class="waves-effect waves-dark" href="manage.php" aria-expanded="false"><i class="mdi mdi-account-check"></i><span class="hide-menu">Manage</span></a>
-                        </li> -->
+                        <li> <a class="waves-effect waves-dark" href="evaluate.php" aria-expanded="false"><i class="mdi mdi-account-check"></i><span class="hide-menu">Evaluation</span></a>
+                        </li>                        
                     </ul>
                 </nav>
                 <!-- End Sidebar navigation -->
             </div>
             <!-- End Sidebar scroll-->
             <!-- Bottom points-->
+            <!-- End Bottom points-->
         </aside>

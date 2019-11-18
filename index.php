@@ -1,3 +1,4 @@
+    
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,100 +9,120 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
-    <title>VOICE</title>
-    <!-- Bootstrap Core CSS -->
-<?php include('includes/header.php');?>
-        <div class="page-wrapper">
-            <div class="container-fluid">
-                <div class="row page-titles">
-                    <div class="col-md-5 col-8 align-self-center">
-                        <h3 class="text-themecolor">Dashboard</h3>
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                            <li class="breadcrumb-item active">Dashboard</li>
-                        </ol>
-                    </div>
-                </div>
+        <!-- Bootstrap Core CSS -->
+    <?php
+include('configs/db.php');
+include('classes/general.php');
+?>
+<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- chartist CSS -->
+<link href="assets/plugins/chartist-js/dist/chartist.min.css" rel="stylesheet">
+<link href="assets/plugins/chartist-js/dist/chartist-init.css" rel="stylesheet">
+<link href="assets/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css" rel="stylesheet">
+    <!--This page css - Morris CSS -->
+<link href="assets/plugins/c3-master/c3.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+<link href="css/style.css" rel="stylesheet">
+    <!-- You can change the theme colors from here -->
+<link href="css/colors/blue.css" id="theme" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
 
-                <!-- Row -->
-                <div class="row">
-                    <div class="col-lg-12 col-xlg-12 col-md-12">
-                        <div class="card">
-                            <!-- Nav tabs -->
-                            <ul class="nav nav-tabs profile-tab" role="tablist">
-                                <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#home" role="tab">Most Recent Activity</a> </li>
-                                <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#profile" role="tab">Other Activities</a> </li>
-                            </ul>
-                            <!-- Tab panes -->
-                            <div class="tab-content">
-                                <div class="tab-pane active" id="home" role="tabpanel">
-                                    <div class="card-block">
-                                        <div class="profiletimeline">
-                                            <hr>
-                                            <div class="sl-item">
-                                                <div class="sl-left"> <img src="assets/images/users/4.jpg" alt="user" class="img-circle"> </div>
-                                                <div class="sl-right">
-                                                    <div><a href="#" class="link">John Doe</a> <span class="sl-date">5 minutes ago</span>
-                                                        <blockquote class="m-t-10">
-                                                            Left a message
-                                                        </blockquote>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="sl-item">
-                                                <div class="sl-left"> <img src="assets/images/users/4.jpg" alt="user" class="img-circle"> </div>
-                                                <div class="sl-right">
-                                                    <div><a href="#" class="link">John Doe</a> <span class="sl-date">5 minutes ago</span>
-                                                        <blockquote class="m-t-10">
-                                                            Left a message
-                                                        </blockquote>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="sl-item">
-                                                <div class="sl-left"> <img src="assets/images/users/4.jpg" alt="user" class="img-circle"> </div>
-                                                <div class="sl-right">
-                                                    <div><a href="#" class="link">John Doe</a> <span class="sl-date">5 minutes ago</span>
-                                                        <blockquote class="m-t-10">
-                                                            Left a message
-                                                        </blockquote>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--second tab-->
-                                <div class="tab-pane" id="profile" role="tabpanel">
-                                    <div class="card-block">
-                                        <div class="row">
-                                            <div class="col-md-3 col-xs-6 b-r"> <strong>Full Name</strong>
-                                                <br>
-                                                <p class="text-muted">Johnathan Deo</p>
-                                            </div>
-                                            <div class="col-md-3 col-xs-6 b-r"> <strong>Mobile</strong>
-                                                <br>
-                                                <p class="text-muted">(123) 456 7890</p>
-                                            </div>
-                                            <div class="col-md-3 col-xs-6 b-r"> <strong>Email</strong>
-                                                <br>
-                                                <p class="text-muted">johnathan@admin.com</p>
-                                            </div>
-                                            <div class="col-md-3 col-xs-6"> <strong>Location</strong>
-                                                <br>
-                                                <p class="text-muted">London</p>
-                                            </div>
-                                        </div>
-                                        <hr>
-                                        <p class="m-t-30">Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries </p>
-                                        <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                                    </div>
+<body class="fix-header fix-sidebar card-no-border">
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <svg class="circular" viewBox="25 25 50 50">
+            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" /> </svg>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <header class="topbar">
+            <nav class="navbar top-navbar navbar-toggleable-sm navbar-light">
+                <!-- ============================================================== -->
+                <!-- Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.php">
+                        <!-- Logo icon --><b>
+                            <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+                            
+                            <!-- Light Logo icon -->
+                            <img src="assets/images/logo-light-icon.png" alt="homepage" class="light-logo" />
+                        </b>
+                        <!--End Logo icon -->
+                        <!-- Logo text --><span>
+                         
+                         <!-- Light Logo text -->    
+                         <b class="white">Jims Clinic</b></a>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Logo -->
+                <!-- ============================================================== -->
+                
+            </nav>
+        </header>
+        <!-- ============================================================== -->
+        <!-- End Topbar header -->
+        
+        <div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+                <!-- ============================================================== -->
+                <!-- Bread crumb and right sidebar toggle -->
+                <!-- ============================================================== -->
+                <div id="login_content">
+                    <br><br><br>
+                    <div class="card container">
+                        <h1 style="text-align:center;margin-bottom:5%;padding-top:5%;">Login to access resources</h1>
+                        <br><br><br><br>
+                        <form style="padding-bottom:5%;" method="POST" action="login.php">
+                            
+                            <div class="form-group row">
+                                <label for="username" class="col-md-4 col-form-label text-md-right">
+                                    Username
+                                </label>
+
+                                <div class="col-md-6">
+                                    <input placeholder="Username" 
+                                    id="username" type="text" class="form-control" name="username" required autofocus>
                                 </div>
                             </div>
-                        </div>
+
+                            <div class="form-group row">
+                                <label for="password" class="col-md-4 col-form-label text-md-right">Password</label>
+
+                                <div class="col-md-6">
+                                    <input id="password" type="password" placeholder="Password" class="form-control" name="password" required autocomplete="new-password">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-3 ct">
+                                </div>
+                                <div class="col-md-5 ct">
+                                    <button type="submit" class="btn btn-lg btn-outline-primary px100">
+                                        Login
+                                    </button>
+                                    <br><br>
+                                </div>                        
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
+        </div>
 <?php include('includes/footer.php');?>

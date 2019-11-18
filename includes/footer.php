@@ -1,4 +1,4 @@
-   <footer class="footer"> © 2018 Voice App </footer>
+   <footer style="background-color:black;" class="footer whiteS"> © 2019 Jims Clinic </footer>
             <!-- ============================================================== -->
             <!-- End footer -->
             <!-- ============================================================== -->
